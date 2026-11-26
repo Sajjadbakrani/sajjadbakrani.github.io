@@ -124,3 +124,22 @@ section[id] { scroll-margin-top:20px; }
 .cv-page .entry dt, .cv-page .entry .detail, .home-page .contact-label { color:var(--ink); }
 @media(max-width:750px) { .research-page .publication { padding-left:16px; } .research-page .publication::before { top:9px; } }
 @media print { .research-page .publication { break-inside:avoid; } }
+
+
+/* Version 16: spacious, responsive link lists on the Miscellaneous page only. */
+.misc-page section { margin-top:43px; padding-top:0; border-top:0; }
+.misc-page #profiles { margin-top:0; }
+.misc-page .profile-links { display:grid; gap:10px; }
+.misc-page .link-row { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 24px; list-style:none; padding:0; margin:0; line-height:1.6; }
+.misc-page .link-row li { white-space:nowrap; max-width:100%; }
+.misc-page .coauthor-links { column-gap:17px; }
+.misc-page .link-row a, .misc-page #useful-links a { text-decoration:none; }
+.misc-page .link-row a:hover, .misc-page .link-row a:focus-visible,
+.misc-page #useful-links a:hover, .misc-page #useful-links a:focus-visible { text-decoration:underline; }
+.misc-page #reading-group p a { text-decoration:underline; }
+@media(max-width:750px) {
+  .misc-page section { margin-top:34px; }
+  .misc-page .link-row { column-gap:18px; }
+  .misc-page .coauthor-links { column-gap:15px; }
+  .misc-page .link-row li { white-space:normal; }
+}
